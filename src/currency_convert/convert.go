@@ -11,7 +11,8 @@ import(
 )
 
 func fetchRate(source string, target string) (rate string) {
-	endpoint := strings.Replace("http://rate-exchange.herokuapp.com/fetchRate?from=SOURCE_CURRENCY&to=TARGET_CURRENCY", "SOURCE_CURRENCY", source, 1)
+	endpoint := "http://rate-exchange.herokuapp.com/fetchRate?from=SOURCE_CURRENCY&to=TARGET_CURRENCY"
+	endpoint = strings.Replace(endpoint, "SOURCE_CURRENCY", source, 1)
 	endpoint = strings.Replace(endpoint, "TARGET_CURRENCY", target, 1)
 	//	log.Println(endpoint)
 	
